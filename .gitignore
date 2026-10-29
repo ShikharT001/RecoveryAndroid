@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# PyTest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# RecoverX / RecoveryAndroid runtime data
+app_data/
+recovery_workspace/
+recoverd/
+exports/
+*.log
+*.sqlite
+*.db
+!tests/fixtures/*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
