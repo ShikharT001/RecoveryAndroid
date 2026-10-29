@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recoveryandroid"
+version = "1.0.0"
+description = "RecoveryAndroid — Android & WhatsApp Data Recovery. Recover what is still recoverable."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT License"}
+authors = [
+    {name = "RecoveryAndroid Development Team"}
+]
+dependencies = [
+    "PySide6>=6.7.0",
+    "Pillow>=10.3.0",
+    "pydantic>=2.7.0",
+    "platformdirs>=4.2.0",
+    "cryptography>=42.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2.0",
+    "pytest-qt>=4.4.0",
+    "pyinstaller>=6.6.0",
+]
+
+[project.scripts]
+recoveryandroid = "app.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
